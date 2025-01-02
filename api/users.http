@@ -1,2 +1,17 @@
-### GET Request
-http://localhost:3000/users
+### GET Request for users
+GET http://localhost:3000/users
+
+
+### Get Request for books
+GET http://localhost:3000/books
+### Get Request for book
+GET http://localhost:3000/books/1
+### Get Request for all books
+POST http://localhost:3000/books
+content-type: application/json
+{     
+    "title": 'To Kill a Mockingbird',
+    "author": 'Harper Lee',
+    "rating": 4.2,
+}
+

@@ -3,9 +3,9 @@ import { ClientProxy } from '@nestjs/microservices';
 
 @Injectable()
 export class UsersService {
-  constructor(@Inject('USERS_CLIENT') private userClient: ClientProxy) {}
+  constructor(@Inject('USERS_CLIENT') private usersClient: ClientProxy) {}
 
   getAll() {
-    return this.userClient.send('users.getAll', {});
+    return this.usersClient.send('users.getAll', {});
   }
 }

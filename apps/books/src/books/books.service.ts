@@ -22,7 +22,7 @@ export class BooksService {
 
   create(createBookDto: CreateBookDto) {
     const newBook: BookDto = {
-      id: this.books.length++,
+      id: this.books.length + 1,
       ...createBookDto,
     };
     this.books.push(newBook);
@@ -30,12 +30,13 @@ export class BooksService {
     return this.books;
   }
 
-  findAll() {
-    return `This action returns all books`;
+  getAll() {
+    return this.books;
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} book`;
+  getOne(id: number) {
+    const filteredBook = this.books.find((book) => book.id === id);
+    return filteredBook;
   }
 
   update(id: number, updateBookDto: UpdateBookDto) {
