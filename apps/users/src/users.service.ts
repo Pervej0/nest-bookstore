@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { UserData } from '../dto/user.dto';
+import { UserData } from './dto/user.dto';
 
 @Injectable()
 export class UsersService {
-  private users: UserData[] = [
+  private user: UserData[] = [
     {
       id: 1,
       firstName: 'Alice',
@@ -24,7 +24,7 @@ export class UsersService {
     },
   ];
 
-  getHello(): string {
-    return 'Hello World!';
+  getAll(): UserData[] {
+    return this.user;
   }
 }
