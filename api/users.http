@@ -6,7 +6,7 @@ GET http://localhost:3000/users
 GET http://localhost:3000/books
 ### Get Request for book
 GET http://localhost:3000/books/1
-### Get Request for all books
+### Post Request 
 POST http://localhost:3000/books
 content-type: application/json
 {     
@@ -14,4 +14,9 @@ content-type: application/json
     "author": 'Harper Lee',
     "rating": 4.2,
 }
+### Update
+PATCH http://localhost:3000/books
+
+### Remove
+DELETE http://localhost:3000/books/10
 
