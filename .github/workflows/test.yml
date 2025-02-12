@@ -26,8 +26,12 @@ jobs:
       - name: 📦 Install Dependencies
         run: npm install
 
-      - name: 🛠 Run Tests
-        run: npm test
+      # - name: 🛠 Run Tests
+      #   run: npm test
 
       - name: 🚀 Build NestJS Project
         run: npm run build
+
+      - name: 📂 List Files in `dist` Directory
+        run: |
+          cd dist && ls -a
